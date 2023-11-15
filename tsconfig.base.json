@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "layout": ["modules/feature/layout/src/index.ts"],
       "modules/layout": ["modules/feature/src/index.ts"]
     }
   },

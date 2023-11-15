@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { LayoutModule } from 'modules/layout';
+import { LayoutModule } from 'layout';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
