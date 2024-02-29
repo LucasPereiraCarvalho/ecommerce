@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
-import { MatCardModule } from '@angular/material/card';
+import { ProductCardComponent } from 'product-ui';
 import { RecommendedProductsService, mockProducts } from 'product-data-access';
 import { of } from 'rxjs';
 describe('HomeComponent', () => {
@@ -9,7 +9,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MatCardModule],
+      imports: [ProductCardComponent],
       declarations: [HomeComponent],
       providers: [
         {
@@ -30,7 +30,7 @@ describe('HomeComponent', () => {
 
   it('should render product cards correctly', () => {
     const cards: HTMLElement[] =
-      fixture.nativeElement.querySelectorAll('mat-card');
+      fixture.nativeElement.querySelectorAll('lib-product-card');
     expect(cards.length).toBe(mockProducts.length);
   });
 });

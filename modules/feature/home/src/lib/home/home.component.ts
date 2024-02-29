@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RecommendedProductsService, mockProducts } from 'product-data-access';
+import { RecommendedProductsService } from 'product-data-access';
 
 @Component({
   selector: 'lib-home',
