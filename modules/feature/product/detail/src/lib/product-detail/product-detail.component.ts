@@ -1,7 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product, ProductSearchService } from 'product-data-access';
+import {
+  CartService,
+  Product,
+  ProductSearchService,
+} from 'product-data-access';
 import { ProductCardComponent } from 'product-ui';
 import { Observable, map, switchMap } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,7 +28,10 @@ function getParamsId(): Observable<string> {
   styleUrl: './product-detail.component.scss',
 })
 export class ProductDetailComponent {
-  constructor(private productSearchService: ProductSearchService) {}
+  constructor(
+    private productSearchService: ProductSearchService,
+    public cartService: CartService
+  ) {}
 
   product$: Observable<Product> = getParamsId().pipe(
     switchMap((id) => this.productSearchService.getById(id))

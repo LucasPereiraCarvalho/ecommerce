@@ -10,6 +10,7 @@ import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { HttpErrorsInterceptor } from './interceptors/http-errors/http-errors.interceptor';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CartComponent } from 'product-ui';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -21,6 +22,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BrowserAnimationsModule,
     ProductSearchComponent,
     MatSnackBarModule,
+    CartComponent,
   ],
   providers: [
     {
