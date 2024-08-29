@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AuthFormComponent } from '../auth-form.component';
 
 @Component({
   selector: 'lib-auth-form-email',
@@ -8,4 +9,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './auth-form-email.component.html',
   styleUrl: './auth-form-email.component.scss',
 })
-export class AuthFormEmailComponent {}
+export class AuthFormEmailComponent {
+  constructor(private authFormComponent: AuthFormComponent) {}
+}
